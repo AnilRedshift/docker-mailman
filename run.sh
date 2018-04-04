@@ -15,8 +15,10 @@ cat << EOB
 
     ***********************************************
     *                                             *
-    *   Docker image: fauria/mailman              *
-    *   https://github.com/fauria/docker-mailman  *
+    *   Docker image: anilredshift/mailman        *
+    *   github.com/anilredshift/docker-mailman    *
+    *   Forked from:                              *
+    *   github.com/fauria/docker-mailman          *
     *                                             *
     ***********************************************
 

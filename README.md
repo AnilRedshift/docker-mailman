@@ -1,4 +1,4 @@
-fauria/mailman
+Mailman
 ==========
 
 ![docker_logo](https://raw.githubusercontent.com/fauria/docker-mailman/master/docker_139x115.png)![docker_fauria_logo](https://raw.githubusercontent.com/fauria/docker-mailman/master/docker_fauria_161x115.png)
@@ -103,7 +103,7 @@ Recommendations
 
 1. Use an specific subdomain for your mailing list, such as `lists.example.com`.
 
-2. Make sure you can add TXT records in your domain's DNS master zone. 
+2. Make sure you can add TXT records in your domain's DNS master zone.
 
 3. In addition to [DKIM](https://www.linode.com/docs/networking/dns/dns-records-an-introduction#dkim), consider adding an [SPF](https://www.linode.com/docs/networking/dns/dns-records-an-introduction#spf) to set your server as the only one originating email for the list domain.
 
@@ -113,13 +113,13 @@ Use cases
 ----
 
 1. Run a temporary container for testing purposes with default values:
- 
+
 ```
 	docker run -i -t --rm -h lists.example.com -e DEBUG_CONTAINER=true fauria/mailman
 ```
 
 2. Run a production container for domain `whatever.example.com` without exported volumes:
- 
+
 ```
 	docker run -d --restart=always -h whatever.example.com -e URL_FQDN=whatever.example.com -e EMAIL_FQDN=whatever.example.com -e MASTER_PASSWORD=SecretPassword -e LIST_ADMIN=whoever@example.com -p 49780:80 -p 25:25 fauria/mailman
 ```
