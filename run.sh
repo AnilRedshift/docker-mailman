@@ -66,7 +66,8 @@ echo 'SMTPPORT = 0' >> $mailmancfg
 echo 'OWNERS_CAN_DELETE_THEIR_OWN_LISTS = Yes' >> $mailmancfg
 
 # remove mm_cfg.pyc, to ensure the new values are picked up
-rm "${mailmancfg}c"
+rm -f "${mailmancfg}c"
+rm -f "/var/lib/mailman/Mailman/mm_cfg.pyc"
 
 echo -n "Initializing mailing lists..."
 {
