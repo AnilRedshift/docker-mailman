@@ -15,7 +15,7 @@ ENV DEBCONF_NONINTERACTIVE_SEEN true
 RUN apt-get update
 RUN apt-get -y upgrade
 
-RUN apt-get install -y mailman exim4 apache2
+RUN apt-get install -y mailman exim4 apache2 vim silversearcher-ag
 
 COPY 00_local_macros /etc/exim4/conf.d/main/
 COPY 04_exim4-config_mailman /etc/exim4/conf.d/main/
